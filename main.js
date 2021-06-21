@@ -2482,7 +2482,8 @@ var getTree = function(treeData) {
         sentenceArray = sentenceArray.join(' ');
 
         //add the text in a bdi html tag
-        bdi_tag = document.createElement('bdi')
+        bdi_tag = document.createElement('bdi');
+        bdi_tag.setAttribute('dir', 'rtl');
         textContentString = document.createTextNode(sentenceArray);
         bdi_tag.appendChild(textContentString);
         //if there is already a text in fullSentence element, remove it
